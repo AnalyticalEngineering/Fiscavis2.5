@@ -12,6 +12,7 @@ struct Fiscavis2_5App: App {
     var body: some Scene {
         WindowGroup {
             HomeView()
+                .environment(\.managedObjectContext, CoreDataProvider.shared.persistentContainer.viewContext)
         }
     }
 }

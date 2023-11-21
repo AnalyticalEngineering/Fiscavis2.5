@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12D915B72B0D0C5D000336B8 /* ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D915B62B0D0C5D000336B8 /* ReminderService.swift */; };
+		12D915B92B0D10CF000336B8 /* UIColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D915B82B0D10CF000336B8 /* UIColorTransformer.swift */; };
+		12D915BB2B0D1713000336B8 /* BudgetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D915BA2B0D1713000336B8 /* BudgetListView.swift */; };
+		12D915BD2B0D1959000336B8 /* BudgetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D915BC2B0D1959000336B8 /* BudgetCard.swift */; };
+		12D915BF2B0D1C40000336B8 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D915BE2B0D1C40000336B8 /* PreviewData.swift */; };
 		12EA9D8B2B0ACA78005702EF /* Fiscavis2_5App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EA9D8A2B0ACA78005702EF /* Fiscavis2_5App.swift */; };
 		12EA9D8D2B0ACA78005702EF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EA9D8C2B0ACA78005702EF /* HomeView.swift */; };
 		12EA9D8F2B0ACA79005702EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12EA9D8E2B0ACA79005702EF /* Assets.xcassets */; };
@@ -41,6 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12D915B62B0D0C5D000336B8 /* ReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderService.swift; sourceTree = "<group>"; };
+		12D915B82B0D10CF000336B8 /* UIColorTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTransformer.swift; sourceTree = "<group>"; };
+		12D915BA2B0D1713000336B8 /* BudgetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetListView.swift; sourceTree = "<group>"; };
+		12D915BC2B0D1959000336B8 /* BudgetCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCard.swift; sourceTree = "<group>"; };
+		12D915BE2B0D1C40000336B8 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		12EA9D872B0ACA78005702EF /* Fiscavis2.5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fiscavis2.5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12EA9D8A2B0ACA78005702EF /* Fiscavis2_5App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fiscavis2_5App.swift; sourceTree = "<group>"; };
 		12EA9D8C2B0ACA78005702EF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -152,6 +162,8 @@
 				12EA9D8C2B0ACA78005702EF /* HomeView.swift */,
 				12EA9E072B0BE5B2005702EF /* AddNewBudgetListView.swift */,
 				12EA9E472B0BF32A005702EF /* IconPickerView.swift */,
+				12D915BA2B0D1713000336B8 /* BudgetListView.swift */,
+				12D915BC2B0D1959000336B8 /* BudgetCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,6 +182,9 @@
 			children = (
 				12EA9DB82B0ACB4F005702EF /* CoreDataProvider.swift */,
 				12EA9E492B0C10C1005702EF /* HapticsManager.swift */,
+				12D915B62B0D0C5D000336B8 /* ReminderService.swift */,
+				12D915B82B0D10CF000336B8 /* UIColorTransformer.swift */,
+				12D915BE2B0D1C40000336B8 /* PreviewData.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -305,11 +320,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				12EA9D8D2B0ACA78005702EF /* HomeView.swift in Sources */,
+				12D915B72B0D0C5D000336B8 /* ReminderService.swift in Sources */,
 				12EA9D8B2B0ACA78005702EF /* Fiscavis2_5App.swift in Sources */,
 				12EA9DB92B0ACB4F005702EF /* CoreDataProvider.swift in Sources */,
+				12D915BF2B0D1C40000336B8 /* PreviewData.swift in Sources */,
 				12EA9E062B0BE54A005702EF /* MyList+CoreDataProperties.swift in Sources */,
+				12D915BB2B0D1713000336B8 /* BudgetListView.swift in Sources */,
 				12EA9E482B0BF32B005702EF /* IconPickerView.swift in Sources */,
+				12D915BD2B0D1959000336B8 /* BudgetCard.swift in Sources */,
 				12EA9E082B0BE5B2005702EF /* AddNewBudgetListView.swift in Sources */,
+				12D915B92B0D10CF000336B8 /* UIColorTransformer.swift in Sources */,
 				12EA9E042B0BE51A005702EF /* MyList+CoreDataClass.swift in Sources */,
 				12EA9E4A2B0C10C1005702EF /* HapticsManager.swift in Sources */,
 				12EA9E022B0BE408005702EF /* FiscavisModel.xcdatamodeld in Sources */,

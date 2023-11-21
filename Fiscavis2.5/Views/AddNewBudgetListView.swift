@@ -34,7 +34,7 @@ struct AddNewBudgetListView: View {
             TextField("Enter Budget Name", text: $name)
                 .multilineTextAlignment(.center)
                 .textFieldStyle(.roundedBorder)
-                .font(.system(size: 16))
+                .font(.system(size: 18))
             Spacer()
         }
         .padding(10)
@@ -43,7 +43,7 @@ struct AddNewBudgetListView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .toolbar {
                     ToolbarItem(placement: .principal) {
-                        Text("New List")
+                        Text("New Budget")
                             .font(.headline)
                     }
                     

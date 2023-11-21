@@ -8,24 +8,31 @@
 import SwiftUI
 
 struct HomeView: View {
+    //MARK:  PROPERTIES
+    
+    @FetchRequest(sortDescriptors: [])
+    private var myListResults: FetchedResults<MyList>
     
     @State private var isPresented: Bool = false
     
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Hello")
-                
-                Spacer()
+
+                BudgetListView(myLists: myListResults)
+                   
+                }
+          
+             //   Spacer()
                 Button {
                     HapticManager.notification(type: .success)
                     isPresented = true
                 } label: {
                     ZStack{
-                        RoundedRectangle(cornerRadius: 20)
+                        Circle()
                             .frame(maxWidth: 200, maxHeight: 50)
                         VStack {
-                            Text("+ Add New Budget")
+                            Image(systemName: "plus")
                                 .foregroundStyle(.white)
                                 .font(.headline)
                                 .fontWeight(.bold)
@@ -41,16 +48,23 @@ struct HomeView: View {
             .sheet(isPresented: $isPresented) {
                 NavigationView{
                     AddNewBudgetListView { name, selectedIcon, color in
+                        do {
+                            try ReminderService.saveMyList(name, selectedIcon, color)
+                        }catch {
+                            print(error)
+                        }
                     }   // save the list to the database
                 }
             }
             .padding(.horizontal)
-        }
         
+      
+
     }
 }
 
 
 #Preview {
     HomeView()
+        .environment(\.managedObjectContext, CoreDataProvider.shared.persistentContainer.viewContext)
 }

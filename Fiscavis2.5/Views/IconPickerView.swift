@@ -30,17 +30,20 @@ struct IconPickerView: View {
     
     let colors: [Color] = [.red, .green, .blue, .yellow, .orange, .purple]
     
-
+    
+    
        var body: some View {
            VStack {
                Text("Select Budget Category Icon:")
                    .font(.headline)
                    .fontWeight(.bold)
                Picker("Icons", selection: $selectedIcon){
+                   
                    ForEach(icon, id: \.self) { icon in
                        Image(systemName: icon)
                            .tag(icon)
-                          
+                           .tint(selectedColor)
+                         
                           
                    }
                   
