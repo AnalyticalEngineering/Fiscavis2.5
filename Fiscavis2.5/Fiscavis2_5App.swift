@@ -11,7 +11,7 @@ import SwiftUI
 struct Fiscavis2_5App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }

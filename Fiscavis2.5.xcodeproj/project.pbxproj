@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		12EA9D8B2B0ACA78005702EF /* Fiscavis2_5App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EA9D8A2B0ACA78005702EF /* Fiscavis2_5App.swift */; };
-		12EA9D8D2B0ACA78005702EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EA9D8C2B0ACA78005702EF /* ContentView.swift */; };
+		12EA9D8D2B0ACA78005702EF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EA9D8C2B0ACA78005702EF /* HomeView.swift */; };
 		12EA9D8F2B0ACA79005702EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12EA9D8E2B0ACA79005702EF /* Assets.xcassets */; };
 		12EA9D932B0ACA79005702EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12EA9D922B0ACA79005702EF /* Preview Assets.xcassets */; };
 		12EA9D9D2B0ACA7A005702EF /* Fiscavis2_5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EA9D9C2B0ACA7A005702EF /* Fiscavis2_5Tests.swift */; };
 		12EA9DA72B0ACA7A005702EF /* Fiscavis2_5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EA9DA62B0ACA7A005702EF /* Fiscavis2_5UITests.swift */; };
 		12EA9DA92B0ACA7A005702EF /* Fiscavis2_5UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EA9DA82B0ACA7A005702EF /* Fiscavis2_5UITestsLaunchTests.swift */; };
+		12EA9DB92B0ACB4F005702EF /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EA9DB82B0ACB4F005702EF /* CoreDataProvider.swift */; };
+		12EA9E022B0BE408005702EF /* FiscavisModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12EA9E002B0BE408005702EF /* FiscavisModel.xcdatamodeld */; };
+		12EA9E042B0BE51A005702EF /* MyList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EA9E032B0BE51A005702EF /* MyList+CoreDataClass.swift */; };
+		12EA9E062B0BE54A005702EF /* MyList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EA9E052B0BE54A005702EF /* MyList+CoreDataProperties.swift */; };
+		12EA9E082B0BE5B2005702EF /* AddNewBudgetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EA9E072B0BE5B2005702EF /* AddNewBudgetListView.swift */; };
+		12EA9E482B0BF32B005702EF /* IconPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EA9E472B0BF32A005702EF /* IconPickerView.swift */; };
+		12EA9E4A2B0C10C1005702EF /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EA9E492B0C10C1005702EF /* HapticsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +43,7 @@
 /* Begin PBXFileReference section */
 		12EA9D872B0ACA78005702EF /* Fiscavis2.5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fiscavis2.5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12EA9D8A2B0ACA78005702EF /* Fiscavis2_5App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fiscavis2_5App.swift; sourceTree = "<group>"; };
-		12EA9D8C2B0ACA78005702EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		12EA9D8C2B0ACA78005702EF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		12EA9D8E2B0ACA79005702EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12EA9D902B0ACA79005702EF /* Fiscavis2_5.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Fiscavis2_5.entitlements; sourceTree = "<group>"; };
 		12EA9D922B0ACA79005702EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -45,6 +52,13 @@
 		12EA9DA22B0ACA7A005702EF /* Fiscavis2.5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Fiscavis2.5UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12EA9DA62B0ACA7A005702EF /* Fiscavis2_5UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fiscavis2_5UITests.swift; sourceTree = "<group>"; };
 		12EA9DA82B0ACA7A005702EF /* Fiscavis2_5UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fiscavis2_5UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		12EA9DB82B0ACB4F005702EF /* CoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
+		12EA9E012B0BE408005702EF /* FiscavisModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FiscavisModel.xcdatamodel; sourceTree = "<group>"; };
+		12EA9E032B0BE51A005702EF /* MyList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		12EA9E052B0BE54A005702EF /* MyList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		12EA9E072B0BE5B2005702EF /* AddNewBudgetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBudgetListView.swift; sourceTree = "<group>"; };
+		12EA9E472B0BF32A005702EF /* IconPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPickerView.swift; sourceTree = "<group>"; };
+		12EA9E492B0C10C1005702EF /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +89,7 @@
 		12EA9D7E2B0ACA78005702EF = {
 			isa = PBXGroup;
 			children = (
+				12EA9E002B0BE408005702EF /* FiscavisModel.xcdatamodeld */,
 				12EA9D892B0ACA78005702EF /* Fiscavis2.5 */,
 				12EA9D9B2B0ACA7A005702EF /* Fiscavis2.5Tests */,
 				12EA9DA52B0ACA7A005702EF /* Fiscavis2.5UITests */,
@@ -95,8 +110,10 @@
 		12EA9D892B0ACA78005702EF /* Fiscavis2.5 */ = {
 			isa = PBXGroup;
 			children = (
+				12EA9DB72B0ACB11005702EF /* Support */,
+				12EA9DB62B0ACB09005702EF /* Models */,
+				12EA9DB52B0ACB02005702EF /* Views */,
 				12EA9D8A2B0ACA78005702EF /* Fiscavis2_5App.swift */,
-				12EA9D8C2B0ACA78005702EF /* ContentView.swift */,
 				12EA9D8E2B0ACA79005702EF /* Assets.xcassets */,
 				12EA9D902B0ACA79005702EF /* Fiscavis2_5.entitlements */,
 				12EA9D912B0ACA79005702EF /* Preview Content */,
@@ -127,6 +144,34 @@
 				12EA9DA82B0ACA7A005702EF /* Fiscavis2_5UITestsLaunchTests.swift */,
 			);
 			path = Fiscavis2.5UITests;
+			sourceTree = "<group>";
+		};
+		12EA9DB52B0ACB02005702EF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				12EA9D8C2B0ACA78005702EF /* HomeView.swift */,
+				12EA9E072B0BE5B2005702EF /* AddNewBudgetListView.swift */,
+				12EA9E472B0BF32A005702EF /* IconPickerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		12EA9DB62B0ACB09005702EF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12EA9E032B0BE51A005702EF /* MyList+CoreDataClass.swift */,
+				12EA9E052B0BE54A005702EF /* MyList+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		12EA9DB72B0ACB11005702EF /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				12EA9DB82B0ACB4F005702EF /* CoreDataProvider.swift */,
+				12EA9E492B0C10C1005702EF /* HapticsManager.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +304,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12EA9D8D2B0ACA78005702EF /* ContentView.swift in Sources */,
+				12EA9D8D2B0ACA78005702EF /* HomeView.swift in Sources */,
 				12EA9D8B2B0ACA78005702EF /* Fiscavis2_5App.swift in Sources */,
+				12EA9DB92B0ACB4F005702EF /* CoreDataProvider.swift in Sources */,
+				12EA9E062B0BE54A005702EF /* MyList+CoreDataProperties.swift in Sources */,
+				12EA9E482B0BF32B005702EF /* IconPickerView.swift in Sources */,
+				12EA9E082B0BE5B2005702EF /* AddNewBudgetListView.swift in Sources */,
+				12EA9E042B0BE51A005702EF /* MyList+CoreDataClass.swift in Sources */,
+				12EA9E4A2B0C10C1005702EF /* HapticsManager.swift in Sources */,
+				12EA9E022B0BE408005702EF /* FiscavisModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +669,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		12EA9E002B0BE408005702EF /* FiscavisModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				12EA9E012B0BE408005702EF /* FiscavisModel.xcdatamodel */,
+			);
+			currentVersion = 12EA9E012B0BE408005702EF /* FiscavisModel.xcdatamodel */;
+			path = FiscavisModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 12EA9D7F2B0ACA78005702EF /* Project object */;
 }
