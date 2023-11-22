@@ -16,6 +16,10 @@
 		12D915C32B0D619E000336B8 /* ReminderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D915C22B0D619E000336B8 /* ReminderListView.swift */; };
 		12D915C52B0D61FD000336B8 /* ReminderCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D915C42B0D61FD000336B8 /* ReminderCellView.swift */; };
 		12D915C72B0D625C000336B8 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D915C62B0D625C000336B8 /* Date+Extension.swift */; };
+		12D916272B0E6FA9000336B8 /* ReminderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D916262B0E6FA9000336B8 /* ReminderDetailView.swift */; };
+		12D9162A2B0E70CC000336B8 /* ReminderEditConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D916292B0E70CC000336B8 /* ReminderEditConfig.swift */; };
+		12D9162C2B0E8A44000336B8 /* CustomOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D9162B2B0E8A44000336B8 /* CustomOperator.swift */; };
+		12D9162E2B0E992A000336B8 /* SelectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D9162D2B0E992A000336B8 /* SelectListView.swift */; };
 		12EA9D8B2B0ACA78005702EF /* Fiscavis2_5App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EA9D8A2B0ACA78005702EF /* Fiscavis2_5App.swift */; };
 		12EA9D8D2B0ACA78005702EF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EA9D8C2B0ACA78005702EF /* HomeView.swift */; };
 		12EA9D8F2B0ACA79005702EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12EA9D8E2B0ACA79005702EF /* Assets.xcassets */; };
@@ -59,6 +63,10 @@
 		12D915C22B0D619E000336B8 /* ReminderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListView.swift; sourceTree = "<group>"; };
 		12D915C42B0D61FD000336B8 /* ReminderCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCellView.swift; sourceTree = "<group>"; };
 		12D915C62B0D625C000336B8 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		12D916262B0E6FA9000336B8 /* ReminderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderDetailView.swift; sourceTree = "<group>"; };
+		12D916292B0E70CC000336B8 /* ReminderEditConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderEditConfig.swift; sourceTree = "<group>"; };
+		12D9162B2B0E8A44000336B8 /* CustomOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOperator.swift; sourceTree = "<group>"; };
+		12D9162D2B0E992A000336B8 /* SelectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectListView.swift; sourceTree = "<group>"; };
 		12EA9D872B0ACA78005702EF /* Fiscavis2.5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fiscavis2.5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12EA9D8A2B0ACA78005702EF /* Fiscavis2_5App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fiscavis2_5App.swift; sourceTree = "<group>"; };
 		12EA9D8C2B0ACA78005702EF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -112,6 +120,22 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		12D916252B0DBCCF000336B8 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				12EA9DB82B0ACB4F005702EF /* CoreDataProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		12D916282B0E709F000336B8 /* EditConfigurations */ = {
+			isa = PBXGroup;
+			children = (
+				12D916292B0E70CC000336B8 /* ReminderEditConfig.swift */,
+			);
+			path = EditConfigurations;
+			sourceTree = "<group>";
+		};
 		12EA9D7E2B0ACA78005702EF = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +160,8 @@
 		12EA9D892B0ACA78005702EF /* Fiscavis2.5 */ = {
 			isa = PBXGroup;
 			children = (
+				12D916252B0DBCCF000336B8 /* Provider */,
+				12D916242B0DBB4F000336B8 /* Extension */,
 				12EA9DB72B0ACB11005702EF /* Support */,
 				12EA9DB62B0ACB09005702EF /* Models */,
 				12EA9DB52B0ACB02005702EF /* Views */,
@@ -183,6 +209,8 @@
 				12D915C02B0D4FA0000336B8 /* BudgetListDetailView.swift */,
 				12D915C22B0D619E000336B8 /* ReminderListView.swift */,
 				12D915C42B0D61FD000336B8 /* ReminderCellView.swift */,
+				12D916262B0E6FA9000336B8 /* ReminderDetailView.swift */,
+				12D9162D2B0E992A000336B8 /* SelectListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +218,7 @@
 		12EA9DB62B0ACB09005702EF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				12D916282B0E709F000336B8 /* EditConfigurations */,
 				12EA9E032B0BE51A005702EF /* MyList+CoreDataClass.swift */,
 				12EA9E052B0BE54A005702EF /* MyList+CoreDataProperties.swift */,
 			);
@@ -199,12 +228,11 @@
 		12EA9DB72B0ACB11005702EF /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				12EA9DB82B0ACB4F005702EF /* CoreDataProvider.swift */,
 				12EA9E492B0C10C1005702EF /* HapticsManager.swift */,
 				12D915B62B0D0C5D000336B8 /* ReminderService.swift */,
 				12D915B82B0D10CF000336B8 /* UIColorTransformer.swift */,
 				12D915BE2B0D1C40000336B8 /* PreviewData.swift */,
-				12D916242B0DBB4F000336B8 /* Extension */,
+				12D9162B2B0E8A44000336B8 /* CustomOperator.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -348,12 +376,16 @@
 				12D915C12B0D4FA0000336B8 /* BudgetListDetailView.swift in Sources */,
 				12D915BB2B0D1713000336B8 /* BudgetListView.swift in Sources */,
 				12EA9E482B0BF32B005702EF /* IconPickerView.swift in Sources */,
+				12D9162A2B0E70CC000336B8 /* ReminderEditConfig.swift in Sources */,
 				12D915BD2B0D1959000336B8 /* BudgetCard.swift in Sources */,
 				12EA9E082B0BE5B2005702EF /* AddNewBudgetListView.swift in Sources */,
 				12D915B92B0D10CF000336B8 /* UIColorTransformer.swift in Sources */,
 				12EA9E042B0BE51A005702EF /* MyList+CoreDataClass.swift in Sources */,
+				12D9162C2B0E8A44000336B8 /* CustomOperator.swift in Sources */,
+				12D916272B0E6FA9000336B8 /* ReminderDetailView.swift in Sources */,
 				12EA9E4A2B0C10C1005702EF /* HapticsManager.swift in Sources */,
 				12D915C32B0D619E000336B8 /* ReminderListView.swift in Sources */,
+				12D9162E2B0E992A000336B8 /* SelectListView.swift in Sources */,
 				12EA9E022B0BE408005702EF /* FiscavisModel.xcdatamodeld in Sources */,
 				12D915C52B0D61FD000336B8 /* ReminderCellView.swift in Sources */,
 				12D915C72B0D625C000336B8 /* Date+Extension.swift in Sources */,
