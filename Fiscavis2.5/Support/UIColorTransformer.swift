@@ -5,13 +5,16 @@
 //  Created by J. DeWeese on 11/21/23.
 //
 
+
 import Foundation
 import UIKit
+
+
 
 class UIColorTransformer: ValueTransformer {
     
     override func transformedValue(_ value: Any?) -> Any? {
-        //transforms to color data
+        
         guard let color = value as? UIColor else { return nil }
         
         do {
@@ -24,7 +27,7 @@ class UIColorTransformer: ValueTransformer {
     }
     
     override func reverseTransformedValue(_ value: Any?) -> Any? {
-       //transforms UI Color data back to actual "color"
+        
         guard let data = value as? Data else { return nil }
         
         do {
@@ -37,4 +40,3 @@ class UIColorTransformer: ValueTransformer {
     }
     
 }
-

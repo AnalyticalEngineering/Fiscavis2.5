@@ -19,7 +19,7 @@ struct AddNewBudgetListView: View {
     let onSave: (String,String, UIColor) -> Void
     
     private var isFormValid: Bool {
-        !name.isEmpty
+        !name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
     
     var body: some View {

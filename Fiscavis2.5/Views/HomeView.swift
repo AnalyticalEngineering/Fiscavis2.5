@@ -43,8 +43,6 @@ struct HomeView: View {
                 }
                     .padding(.horizontal)
             }
-            
-            
             .sheet(isPresented: $isPresented) {
                 NavigationView{
                     AddNewBudgetListView { name, selectedIcon, color in
