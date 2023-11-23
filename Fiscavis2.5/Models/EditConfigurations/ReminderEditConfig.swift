@@ -9,7 +9,7 @@ import Foundation
 
 struct ReminderEditConfig {
     var title: String = ""
-    var notes: String?
+    var note: String?
     var isCompleted: Bool = false
     var hasDate: Bool = false
     var hasTime: Bool = false
@@ -20,7 +20,7 @@ struct ReminderEditConfig {
     
     init(reminder: Reminder) {
         title = reminder.title ?? ""
-        notes = reminder.note
+        note = reminder.note
         isCompleted = reminder.isCompleted
         reminderDate = reminder.reminderDate
         reminderTime = reminder.reminderTime

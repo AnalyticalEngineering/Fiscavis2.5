@@ -18,12 +18,10 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             VStack {
-
+                
                 BudgetListView(myLists: myListResults)
-                   
-                }
-          
-             //   Spacer()
+                
+                //   Spacer()
                 Button {
                     HapticManager.notification(type: .success)
                     isPresented = true
@@ -41,7 +39,7 @@ struct HomeView: View {
                         
                     }
                 }
-                    .padding(.horizontal)
+                .padding(.horizontal)
             }
             .sheet(isPresented: $isPresented) {
                 NavigationView{
@@ -55,13 +53,10 @@ struct HomeView: View {
                 }
             }
             .padding(.horizontal)
-        
-      
-
+        }
     }
+    
 }
-
-
 #Preview {
     HomeView()
         .environment(\.managedObjectContext, CoreDataProvider.shared.persistentContainer.viewContext)
