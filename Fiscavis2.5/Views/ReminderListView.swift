@@ -61,21 +61,21 @@ struct ReminderListView: View {
         }
     }
 }
-    struct ReminderListView_Previews: PreviewProvider{
+struct ReminderListView_Previews: PreviewProvider{
+    
+    
+    struct ReminderListContainer: View {
+        @FetchRequest(sortDescriptors: [])
+        private var reminderResults: FetchedResults<Reminder>
         
-        
-        struct ReminderListContainer: View {
-            @FetchRequest(sortDescriptors: [])
-            private var reminderResults: FetchedResults<Reminder>
-            
-            var body: some View {
-                ReminderListView(reminders: reminderResults)
-            }
-        }
-        static var previews: some View{
-            ReminderListContainer()
-                .environment(\.managedObjectContext,
-                              CoreDataProvider.shared.persistentContainer.viewContext)
+        var body: some View {
+            ReminderListView(reminders: reminderResults)
         }
     }
+    static var previews: some View{
+        ReminderListContainer()
+            .environment(\.managedObjectContext,
+                          CoreDataProvider.shared.persistentContainer.viewContext)
+    }
+}
 
