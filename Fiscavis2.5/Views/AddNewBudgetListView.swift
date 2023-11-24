@@ -34,7 +34,7 @@ struct AddNewBudgetListView: View {
             TextField("Enter Budget Name", text: $name)
                 .multilineTextAlignment(.center)
                 .textFieldStyle(.roundedBorder)
-                .font(.system(size: 18))
+                .font(.system(size: 22))
             Spacer()
         }
         .padding(10)
@@ -48,10 +48,14 @@ struct AddNewBudgetListView: View {
                     }
                     
                     ToolbarItem(placement: .navigationBarLeading) {
-                        Button("Close") {
+                        Button("Cancel") {
                             HapticManager.notification(type: .success)
                             dismiss()
                         }
+                        .fontDesign(.serif)
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .tint(.red)
                     }
                     
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -61,15 +65,21 @@ struct AddNewBudgetListView: View {
                             onSave(name, selectedIcon, UIColor(selectedColor))
                             
                             dismiss()
-                        }.disabled(!isFormValid)
+                        }
+                        .disabled(!isFormValid)
+                        .fontDesign(.serif)
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .tint(.green)
                     }
                 }
         }
     }
 
-//#Preview {
-//    NavigationView {
-//        AddNewBudgetListView(onSave: { (_,_, _) in })
-//    }
-//}
-//
+struct AddNewListView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            AddNewBudgetListView(onSave: { (_, _, _) in })
+        }
+    }
+}

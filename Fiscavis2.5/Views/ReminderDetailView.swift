@@ -12,6 +12,7 @@ struct ReminderDetailView: View {
     @Binding var reminder: Reminder
     @State var editConfig: ReminderEditConfig = ReminderEditConfig()
     @Environment(\.dismiss) private var dismiss
+    //is form valid
     private var isFormValid: Bool {
         !editConfig.title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
@@ -23,26 +24,21 @@ struct ReminderDetailView: View {
                         TextField("Title", text: $editConfig.title)
                         TextField("Notes", text: $editConfig.note ?? "")
                     }
-                    
                     Section {
                         Toggle(isOn: $editConfig.hasDate) {
                             Image(systemName: "calendar")
                                 .foregroundColor(.red)
                         }
-                        
                         if editConfig.hasDate {
                             DatePicker("Select Date", selection: $editConfig.reminderDate ?? Date(), displayedComponents: .date)
                         }
-                        
                         Toggle(isOn: $editConfig.hasTime) {
                             Image(systemName: "clock")
                                 .foregroundColor(.blue)
                         }
-                        
                         if editConfig.hasTime {
                             DatePicker("Select Date", selection: $editConfig.reminderTime ?? Date(), displayedComponents: .hourAndMinute)
                         }
-                        
                         Section {
                             NavigationLink {
                                 SelectListView(selectedList: $reminder.list)
@@ -53,7 +49,6 @@ struct ReminderDetailView: View {
                                     Text(reminder.list!.name)
                                 }
                             }
-
                         }
                     }.onChange(of: editConfig.hasDate) { hasDate in
                         if hasDate {
@@ -71,23 +66,41 @@ struct ReminderDetailView: View {
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     Text("Budget Details")
+                        
                 }
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
                             do {
-                              let _ = try ReminderService.updateReminder(reminder: reminder, editConfig: editConfig)
+                              let updated = try ReminderService.updateReminder(reminder: reminder, editConfig: editConfig)
+                                if updated {
+                                    //verify need for notification trigger
+                                    if reminder.reminderDate != nil || reminder.reminderTime != nil {
+                                        let userData = UserData(title: reminder.title, body: reminder.note, date: reminder.reminderDate, time: reminder.reminderTime)
+                                        //MARK:  SCHEDULE NOTIFICATION
+                                        NotificationManager.scheduleNotification(userData: userData)
+                                    }
+                                }
                             } catch {
                                 print(error)
                             }
                         dismiss()
-                    }.disabled(!isFormValid)
+                    }
+                    .fontDesign(.serif)
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .tint(.red)
+                    .disabled(!isFormValid)
                 }
                 
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Cancel") {
                         dismiss()
                     }
+                    .fontDesign(.serif)
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .tint(.red)
                 }
             }
         }

@@ -16,9 +16,6 @@ enum ReminderCellEvent {
     case onSelect(Reminder)
 }
 
-
-
-
 struct ReminderCellView: View {
     //MARK:  PROPERTIES
     let reminder: Reminder
@@ -38,25 +35,19 @@ struct ReminderCellView: View {
             return date.formatted(date: .numeric, time: .omitted)
         }
     }
-    
     var body: some View {
         HStack {
-            
             Image(systemName: checked ? "circle.inset.filled": "circle")
                 .font(.title2)
                 .opacity(0.4)
                 .onTapGesture {
                     HapticManager.notification(type: .success)
                     checked.toggle()  //task complete
-                 
                     delay.cancel()   //cancel old task
-                    
                     delay.performWork {
                         onEvent(.onCheckedChange(reminder, checked))  //call onCheckedChange inside delay time
                     }
-                 
                 }
-            
             VStack(alignment: .leading) {
                 Text(reminder.title ?? "")
                 if let note = reminder.note, !note.isEmpty {
@@ -64,26 +55,26 @@ struct ReminderCellView: View {
                         .opacity(0.4)
                         .font(.caption)
                 }
-                
-                HStack {
-                    if let reminderDate = reminder.reminderDate {
-                        Text(formatDate(reminderDate))
-                    }
-                    
-                    if let reminderTime = reminder.reminderTime {
-                        Text(reminderTime.formatted(date: .omitted, time: .shortened))
-                    }
-                }.frame(maxWidth: .infinity, alignment: .leading)
+            }
+            
+            HStack {
+                if let reminderDate = reminder.reminderDate {
+                    Text(formatDate(reminderDate))
+                }
+                if let reminderTime = reminder.reminderTime {
+                    Text(reminderTime.formatted(date: .omitted, time: .shortened))
+                }
+            }.frame(maxWidth: .infinity, alignment: .leading)
                 .font(.caption)
                 .opacity(0.4)
-            }
-            Spacer()
-            Image(systemName: "info.circle.fill")
-                .opacity(isSelected ? 1.0 : 0.0)
-                .onTapGesture {
-                    onEvent(.onInfo)
-                }
         }
+        Spacer()
+        Image(systemName: "info.circle.fill")
+            .opacity(isSelected ? 1.0: 0.0)
+            .onTapGesture {
+                onEvent(.onInfo)
+            }
+   
         .onAppear{
             checked = reminder.isCompleted
         }

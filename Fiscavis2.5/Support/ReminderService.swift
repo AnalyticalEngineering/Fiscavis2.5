@@ -7,10 +7,11 @@
 
 import Foundation
 import CoreData
-import UIKit //UI Color
+import UIKit
+
 
 class ReminderService {
-    //MARK: SAVING LIST FUNCTION AND SERVICE 
+    
     static var viewContext: NSManagedObjectContext {
         CoreDataProvider.shared.persistentContainer.viewContext
     }
@@ -19,13 +20,14 @@ class ReminderService {
         try viewContext.save()
     }
     
-    static func saveMyList(_ name: String, _ icon: String, _ color: UIColor) throws {
+    static func saveMyList(_ name: String,  icon: String,  _ color: UIColor) throws {
         let myList = MyList(context: viewContext)
         myList.name = name
         myList.icon = icon
         myList.color = color
         try save()
     }
+    
     static func updateReminder(reminder: Reminder, editConfig: ReminderEditConfig) throws -> Bool {
         
         let reminderToUpdate = reminder
@@ -38,26 +40,59 @@ class ReminderService {
         try save()
         return true
     }
+    //MARK:  DELETE REMINDER
     static func deleteReminder(_ reminder: Reminder) throws {
         viewContext.delete(reminder)
         try save()
     }
-    static func saveReminderToMyList(myList: MyList, reminderTitle: String) throws {
-        let reminder = Reminder(context: viewContext)
-        reminder.title = reminderTitle
-        myList.addToReminders(reminder)
+    //MARK:  DELETE BUDGET
+    static func deleteMyList(_ myList: MyList) throws {
+        viewContext.delete(myList)
         try save()
     }
-    static func getRemindersByList(myList: MyList) -> NSFetchRequest<Reminder> {
-        let request = Reminder.fetchRequest()
-        request.sortDescriptors = []
-        request.predicate = NSPredicate(format: "list = %@ AND isCompleted = false", myList)
-        return request
-    }
+    
     static func getRemindersBySearchTerm(_ searchTerm: String) -> NSFetchRequest<Reminder> {
         let request = Reminder.fetchRequest()
         request.sortDescriptors = []
         request.predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchTerm)
         return request
     }
+    
+    static func saveReminderToMyList(myList: MyList, reminderTitle: String) throws {
+        let reminder = Reminder(context: viewContext)
+        reminder.title = reminderTitle
+        myList.addToReminders(reminder)
+        try save()
+    }
+    static func remindersByStatType(statType: ReminderStatType) -> NSFetchRequest<Reminder> {
+        
+        let request = Reminder.fetchRequest()
+        request.sortDescriptors = []
+        
+        switch statType {
+        case .all:
+            request.predicate = NSPredicate(format: "isCompleted = false")
+        case .today:
+            let today = Date()
+            let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today)
+            request.predicate = NSPredicate(format: "(reminderDate >= %@) AND (reminderDate < %@)", today as NSDate, tomorrow! as NSDate)
+        case .scheduled:
+            request.predicate = NSPredicate(format: "(reminderDate != nil OR reminderTime != nil) AND isCompleted = false")
+        case .completed:
+            request.predicate = NSPredicate(format: "isCompleted = true")
+        }
+        
+        return request
+    }
+
+
+    
+    static func getRemindersByList(myList: MyList) -> NSFetchRequest<Reminder> {
+        let request = Reminder.fetchRequest()
+        request.sortDescriptors = []
+        request.predicate = NSPredicate(format: "list = %@ AND isCompleted = false", myList)
+        return request
+    }
+    
 }
+

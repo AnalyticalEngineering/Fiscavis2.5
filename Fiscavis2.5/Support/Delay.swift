@@ -13,11 +13,12 @@ class Delay {
     private var seconds: Double
     var workItem: DispatchWorkItem?
     
-    init(seconds: Double = 1.0) {
+    init(seconds: Double = 1.5) {
         self.seconds = seconds
      
     }
     func performWork(_ work: @escaping () -> Void) {
+        
         workItem = DispatchWorkItem(block: {
             work()
         })

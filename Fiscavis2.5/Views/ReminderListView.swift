@@ -55,12 +55,14 @@ struct ReminderListView: View {
                         }
                     }
                 }.onDelete(perform: deleteReminder)
-            }.sheet(isPresented: $showReminderDetail) {
+            }
+            }
+        .sheet(isPresented: $showReminderDetail) {
                 ReminderDetailView(reminder: Binding($selectedReminder)!)
             }
         }
     }
-}
+
 struct ReminderListView_Previews: PreviewProvider{
     
     

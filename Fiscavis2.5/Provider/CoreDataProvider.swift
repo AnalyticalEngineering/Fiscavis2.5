@@ -8,7 +8,6 @@
 import Foundation
 import CoreData
 
-
 class CoreDataProvider {
     
     static let shared = CoreDataProvider()
@@ -16,17 +15,16 @@ class CoreDataProvider {
     
     private init() {
         
-        //register transformers
+        // register transformers
         ValueTransformer.setValueTransformer(UIColorTransformer(), forName: NSValueTransformerName("UIColorTransformer"))
         
         persistentContainer = NSPersistentContainer(name: "FiscavisModel")
         persistentContainer.loadPersistentStores { description, error in
             if let error {
-                fatalError("Error initializing Budget Model \(error)")
+                fatalError("Error initializing RemindersModel \(error)")
             }
         }
         
     }
     
 }
-

@@ -10,7 +10,9 @@ import SwiftUI
 struct BudgetListDetailView: View {
     //MARK:  PROPERTIES
     @Environment(\.dismiss) private var dismiss
+    
     let myList: MyList
+    
     @State private var openAddReminder: Bool = false
     @State private var title: String = ""
     
@@ -28,23 +30,32 @@ struct BudgetListDetailView: View {
     var body: some View {
         VStack {
             
-            // Display List of Bills
+            //MARK:  REMINDER LIST VIEW
             ReminderListView(reminders: reminderResults)
             
-            HStack {
-                Image(systemName: "plus.circle.fill")
-                Button("New Bill") {
-                    openAddReminder = true
+            Button {
+                HapticManager.notification(type: .success)
+              openAddReminder = true
+            } label: {
+                ZStack{
+                    Circle()
+                        .frame(width: 50, height: 50)
+                    VStack {
+                        Image(systemName: "plus")
+                            .foregroundStyle(.white)
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .frame(maxWidth: .infinity)
+                    }
                 }
-            }.foregroundColor(.blue)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding()
-        }.alert("Enter New Bill", isPresented: $openAddReminder) {
+            }
+        }.padding(.bottom)
+        .alert("Enter New Bill", isPresented: $openAddReminder) {
             TextField("", text: $title)
             Button("Cancel", role: .cancel) {
                 
             }
-            //save the bill reminder
+            //MARK:  SAVE REMINDER BUTTON
             Button("Save") {
                 if isFormValid{
                     HapticManager.notification(type: .success)
@@ -58,4 +69,9 @@ struct BudgetListDetailView: View {
             }
         }
     }
+struct BudgetListDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        BudgetListDetailView(myList: PreviewData.myList)
+    }
+}
 

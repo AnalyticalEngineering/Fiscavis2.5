@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12C21A2C2B0FE01C00E28142 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C21A2B2B0FE01C00E28142 /* NotificationManager.swift */; };
 		12D915B72B0D0C5D000336B8 /* ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D915B62B0D0C5D000336B8 /* ReminderService.swift */; };
 		12D915B92B0D10CF000336B8 /* UIColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D915B82B0D10CF000336B8 /* UIColorTransformer.swift */; };
 		12D915BB2B0D1713000336B8 /* BudgetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D915BA2B0D1713000336B8 /* BudgetListView.swift */; };
@@ -21,6 +22,9 @@
 		12D9162C2B0E8A44000336B8 /* CustomOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D9162B2B0E8A44000336B8 /* CustomOperator.swift */; };
 		12D9162E2B0E992A000336B8 /* SelectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D9162D2B0E992A000336B8 /* SelectListView.swift */; };
 		12D916302B0EB597000336B8 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D9162F2B0EB597000336B8 /* Delay.swift */; };
+		12D916322B0F08D8000336B8 /* RemindersStatsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D916312B0F08D8000336B8 /* RemindersStatsBuilder.swift */; };
+		12D916342B0F0C1A000336B8 /* ReminderStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D916332B0F0C1A000336B8 /* ReminderStatView.swift */; };
+		12D916362B0F0D2F000336B8 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D916352B0F0D2F000336B8 /* UIExtension.swift */; };
 		12EA9D8B2B0ACA78005702EF /* Fiscavis2_5App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EA9D8A2B0ACA78005702EF /* Fiscavis2_5App.swift */; };
 		12EA9D8D2B0ACA78005702EF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EA9D8C2B0ACA78005702EF /* HomeView.swift */; };
 		12EA9D8F2B0ACA79005702EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12EA9D8E2B0ACA79005702EF /* Assets.xcassets */; };
@@ -55,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12C21A2B2B0FE01C00E28142 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		12D915B62B0D0C5D000336B8 /* ReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderService.swift; sourceTree = "<group>"; };
 		12D915B82B0D10CF000336B8 /* UIColorTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTransformer.swift; sourceTree = "<group>"; };
 		12D915BA2B0D1713000336B8 /* BudgetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetListView.swift; sourceTree = "<group>"; };
@@ -69,6 +74,9 @@
 		12D9162B2B0E8A44000336B8 /* CustomOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOperator.swift; sourceTree = "<group>"; };
 		12D9162D2B0E992A000336B8 /* SelectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectListView.swift; sourceTree = "<group>"; };
 		12D9162F2B0EB597000336B8 /* Delay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
+		12D916312B0F08D8000336B8 /* RemindersStatsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersStatsBuilder.swift; sourceTree = "<group>"; };
+		12D916332B0F0C1A000336B8 /* ReminderStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderStatView.swift; sourceTree = "<group>"; };
+		12D916352B0F0D2F000336B8 /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
 		12EA9D872B0ACA78005702EF /* Fiscavis2.5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fiscavis2.5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12EA9D8A2B0ACA78005702EF /* Fiscavis2_5App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fiscavis2_5App.swift; sourceTree = "<group>"; };
 		12EA9D8C2B0ACA78005702EF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -114,9 +122,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12C21A2A2B0FDF7500E28142 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				12C21A2B2B0FE01C00E28142 /* NotificationManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		12D916242B0DBB4F000336B8 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				12D916352B0F0D2F000336B8 /* UIExtension.swift */,
 				12D915C62B0D625C000336B8 /* Date+Extension.swift */,
 			);
 			path = Extension;
@@ -142,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				12EA9D892B0ACA78005702EF /* Fiscavis2.5 */,
-				12EA9E002B0BE408005702EF /* FiscavisModel.xcdatamodeld */,
 				12EA9D9B2B0ACA7A005702EF /* Fiscavis2.5Tests */,
 				12EA9DA52B0ACA7A005702EF /* Fiscavis2.5UITests */,
 				12EA9D882B0ACA78005702EF /* Products */,
@@ -162,6 +178,7 @@
 		12EA9D892B0ACA78005702EF /* Fiscavis2.5 */ = {
 			isa = PBXGroup;
 			children = (
+				12C21A2A2B0FDF7500E28142 /* Manager */,
 				12D916252B0DBCCF000336B8 /* Provider */,
 				12D916242B0DBB4F000336B8 /* Extension */,
 				12EA9DB72B0ACB11005702EF /* Support */,
@@ -213,6 +230,8 @@
 				12D915C42B0D61FD000336B8 /* ReminderCellView.swift */,
 				12D916262B0E6FA9000336B8 /* ReminderDetailView.swift */,
 				12D9162D2B0E992A000336B8 /* SelectListView.swift */,
+				12D916332B0F0C1A000336B8 /* ReminderStatView.swift */,
+				12EA9E002B0BE408005702EF /* FiscavisModel.xcdatamodeld */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +242,7 @@
 				12D916282B0E709F000336B8 /* EditConfigurations */,
 				12EA9E032B0BE51A005702EF /* MyList+CoreDataClass.swift */,
 				12EA9E052B0BE54A005702EF /* MyList+CoreDataProperties.swift */,
+				12D916312B0F08D8000336B8 /* RemindersStatsBuilder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -371,7 +391,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				12EA9D8D2B0ACA78005702EF /* HomeView.swift in Sources */,
+				12D916362B0F0D2F000336B8 /* UIExtension.swift in Sources */,
 				12D915B72B0D0C5D000336B8 /* ReminderService.swift in Sources */,
+				12D916342B0F0C1A000336B8 /* ReminderStatView.swift in Sources */,
 				12EA9D8B2B0ACA78005702EF /* Fiscavis2_5App.swift in Sources */,
 				12EA9DB92B0ACB4F005702EF /* CoreDataProvider.swift in Sources */,
 				12D915BF2B0D1C40000336B8 /* PreviewData.swift in Sources */,
@@ -380,6 +402,7 @@
 				12D915BB2B0D1713000336B8 /* BudgetListView.swift in Sources */,
 				12EA9E482B0BF32B005702EF /* IconPickerView.swift in Sources */,
 				12D9162A2B0E70CC000336B8 /* ReminderEditConfig.swift in Sources */,
+				12C21A2C2B0FE01C00E28142 /* NotificationManager.swift in Sources */,
 				12D915BD2B0D1959000336B8 /* BudgetCard.swift in Sources */,
 				12EA9E082B0BE5B2005702EF /* AddNewBudgetListView.swift in Sources */,
 				12D915B92B0D10CF000336B8 /* UIColorTransformer.swift in Sources */,
@@ -390,6 +413,7 @@
 				12D915C32B0D619E000336B8 /* ReminderListView.swift in Sources */,
 				12D9162E2B0E992A000336B8 /* SelectListView.swift in Sources */,
 				12EA9E022B0BE408005702EF /* FiscavisModel.xcdatamodeld in Sources */,
+				12D916322B0F08D8000336B8 /* RemindersStatsBuilder.swift in Sources */,
 				12D915C52B0D61FD000336B8 /* ReminderCellView.swift in Sources */,
 				12D915C72B0D625C000336B8 /* Date+Extension.swift in Sources */,
 				12D916302B0EB597000336B8 /* Delay.swift in Sources */,
